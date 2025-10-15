@@ -1,22 +1,22 @@
 {
-  "name": "@surunnuage/strapi-plugin-expo-notifications",
-  "version": "2.0.5",
-  "description": "Send expo notifications from Strapi",
+  "name": "@danlutsevych/strapi-plugin-expo-notifications",
+  "version": "2.0.6",
+  "description": "Send expo notifications from Strapi. Forked from https://github.com/Sur-un-nuage/strapi-plugin-expo-notifications and patched to work with Strapi v5",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sur-un-nuage/strapi-plugin-expo-notifications.git"
+    "url": "git+https://github.com/danyalutsevich/strapi-plugin-expo-notifications.git"
   },
   "license": "MIT",
   "author": {
-    "name": "Thomas Poirier",
-    "email": "opendev@surunnuage.dev",
-    "url": "https://www.surunnuage.dev"
+    "name": "Dan Lutsevych",
+    "email": "luchevich31@gmail.com",
+    "url": "https://github.com/danyalutsevich/strapi-plugin-expo-notifications"
   },
   "maintainers": [
     {
-      "name": "Sur un nuage .dev",
-      "email": "opendev@surunnuage.dev",
-      "url": "https://www.surunnuage.dev"
+      "name": "Dan Lutsevych",
+      "email": "luchevich31@gmail.com",
+      "url": "https://github.com/danyalutsevich/strapi-plugin-expo-notifications"
     }
   ],
   "dependencies": {
@@ -30,7 +30,7 @@
   },
   "strapi": {
     "name": "expo-notifications",
-    "description": "Send expo notifications from Strapi",
+    "description": "Send expo notifications from Strapi. Forked from https://github.com/Sur-un-nuage/strapi-plugin-expo-notifications and patched to work with Strapi v5",
     "kind": "plugin",
     "displayName": "My Notifications"
   }
