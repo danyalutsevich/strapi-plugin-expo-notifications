@@ -23,7 +23,7 @@
     "expo-server-sdk": "^3.6.0"
   },
   "peerDependencies": {
-    "@strapi/strapi": "^4.6.0"
+    "@strapi/strapi": "^5.0.0"
   },
   "engines": {
     "node": ">=16.x.x <=21.x.x"
