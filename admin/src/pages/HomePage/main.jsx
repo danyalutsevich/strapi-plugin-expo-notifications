@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Empty from "./empty";
 import { useFetchClient } from "@strapi/strapi/admin";
 
@@ -144,7 +144,7 @@ export default function Main({
           }
         />
         <div style={{ paddingTop: 12 }}>
-          <Switch>
+          <Routes>
             <Route path={`/plugins/${pluginId}`} exact>
               <Sent
                 notifications={notifications}
@@ -153,7 +153,7 @@ export default function Main({
               />
             </Route>
             <Route component={Empty} />
-          </Switch>
+          </Routes>
         </div>
       </ContentLayout>
     </div>
