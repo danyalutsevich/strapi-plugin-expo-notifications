@@ -1,7 +1,7 @@
 import React from "react";
-import { Box } from "@strapi/design-system/Box";
-import { BaseCheckbox } from "@strapi/design-system/BaseCheckbox";
-import { Typography } from "@strapi/design-system/Typography";
+import { Box } from "@strapi/design-system";
+import { BaseCheckbox } from "@strapi/design-system";
+import { Typography } from "@strapi/design-system";
 
 export default function ReceiverItem({ item, tokens, removeToken, addToken }) {
   const { label, value } = item;

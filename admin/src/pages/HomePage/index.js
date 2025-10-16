@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import useQueryParams from "../../utils/useQueryParams";
-import { useFetchClient } from "@strapi/helper-plugin";
+import { useFetchClient } from "@strapi/strapi/admin";
 
 import Main from "./main";
 
@@ -26,7 +26,7 @@ export default function HomePageWithData() {
     const res = await get(`/expo-notifications/recipientsFrom/0`);
     const { data } = res;
     const options = buildReceiversOptions(
-      data.recipients ? data.recipients : []
+      data.recipients ? data.recipients : [],
     );
     setReceivers(options);
     setReceiversCount(data.count);
@@ -41,14 +41,14 @@ export default function HomePageWithData() {
         pageSize = Number(query.pageSize);
       }
       const res = await get(
-        `/expo-notifications/findFrom/?page=${query.page}&pageSize=${pageSize}`
+        `/expo-notifications/findFrom/?page=${query.page}&pageSize=${pageSize}`,
       );
       setNotifications(res.data?.notifications);
       setCount(res.data?.count);
       setIsLoading(false);
     } else {
       const res = await get(
-        `/expo-notifications/findFrom/?page=${page}&pageSize=${pageSize}`
+        `/expo-notifications/findFrom/?page=${page}&pageSize=${pageSize}`,
       );
       setNotifications(res.data?.notifications);
       setCount(res.data?.count);

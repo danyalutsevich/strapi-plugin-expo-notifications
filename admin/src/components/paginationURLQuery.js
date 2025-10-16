@@ -5,7 +5,7 @@ import {
   PreviousLink,
   Dots,
   PageLink,
-} from "@strapi/design-system/Pagination";
+} from "@strapi/design-system";
 import PropTypes from "prop-types";
 import { useLocation, NavLink } from "react-router-dom";
 import { useIntl } from "react-intl";
@@ -34,7 +34,7 @@ const PaginationURLQuery = ({ pagination: { pageCount = 1 } }) => {
           id: "components.pagination.go-to",
           defaultMessage: "Go to page {page}",
         },
-        { page: 1 }
+        { page: 1 },
       )}
     </PageLink>,
   ];
@@ -55,7 +55,7 @@ const PaginationURLQuery = ({ pagination: { pageCount = 1 } }) => {
                 id: "components.pagination.go-to",
                 defaultMessage: "Go to page {page}",
               },
-              { page: number }
+              { page: number },
             )}
           </PageLink>
         );
@@ -98,9 +98,9 @@ const PaginationURLQuery = ({ pagination: { pageCount = 1 } }) => {
             id: "components.pagination.go-to",
             defaultMessage: "Go to page {page}",
           },
-          { page: pageCount }
+          { page: pageCount },
         )}
-      </PageLink>
+      </PageLink>,
     );
   }
 
@@ -152,7 +152,7 @@ const PaginationURLQuery = ({ pagination: { pageCount = 1 } }) => {
         to={`${pathname}?${makeSearch(number)}`}
       >
         Go to page {number}
-      </PageLink>
+      </PageLink>,
     );
   });
 
@@ -169,9 +169,9 @@ const PaginationURLQuery = ({ pagination: { pageCount = 1 } }) => {
             id: "components.pagination.go-to",
             defaultMessage: "Go to page {page}",
           },
-          { page: number }
+          { page: number },
         )}
-      </PageLink>
+      </PageLink>,
     );
   });
 
@@ -195,9 +195,9 @@ const PaginationURLQuery = ({ pagination: { pageCount = 1 } }) => {
               id: "components.pagination.go-to",
               defaultMessage: "Go to page {page}",
             },
-            { page: number }
+            { page: number },
           )}
-        </PageLink>
+        </PageLink>,
       );
     });
   }
@@ -231,7 +231,7 @@ const PaginationURLQuery = ({ pagination: { pageCount = 1 } }) => {
               id: "components.pagination.remaining-links",
               defaultMessage: "And {number} other links",
             },
-            { number: beforeDotsLinksLength }
+            { number: beforeDotsLinksLength },
           )}
         </Dots>
       )}
@@ -243,7 +243,7 @@ const PaginationURLQuery = ({ pagination: { pageCount = 1 } }) => {
               id: "components.pagination.remaining-links",
               defaultMessage: "And {number} other links",
             },
-            { number: afterDotsLength }
+            { number: afterDotsLength },
           )}
         </Dots>
       )}

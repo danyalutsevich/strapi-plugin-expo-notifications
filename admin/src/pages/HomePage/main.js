@@ -2,9 +2,8 @@ import React, { useState } from "react";
 
 import { Switch, Route } from "react-router-dom";
 import Empty from "./empty";
-import { useFetchClient } from "@strapi/helper-plugin";
+import { useFetchClient } from "@strapi/strapi/admin";
 
-import { Icon } from "@strapi/design-system/Icon";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
@@ -12,7 +11,7 @@ import {
   BaseHeaderLayout,
   TwoColsLayout,
   ContentLayout,
-} from "@strapi/design-system/Layout";
+} from "@strapi/admin/strapi-admin";
 
 import { useIntl } from "react-intl";
 
@@ -23,15 +22,6 @@ import Receivers from "./receivers";
 import pluginId from "../../pluginId";
 import getTrad from "../../utils/getTrad";
 import { getContentTypeName } from "./functions";
-
-const Pencil = () => (
-  <Icon
-    width={`${25 / 16}rem`}
-    height={`${25 / 16}rem`}
-    color="secondary500"
-    as={Pencil}
-  />
-);
 
 export default function Main({
   notifications,
@@ -71,7 +61,7 @@ export default function Main({
         formatMessage({
           id: getTrad("form.required"),
           defaultMessage: "Required field",
-        })
+        }),
       ),
     }),
     onSubmit: async (values) => {

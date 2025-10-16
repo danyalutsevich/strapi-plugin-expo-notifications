@@ -2,26 +2,27 @@
  * axios with a custom config.
  */
 
-import axios from 'axios';
-import { auth } from '@strapi/helper-plugin';
+import axios from "axios";
+// import { auth } from '@strapi/helper-plugin';
 
 const instance = axios.create({
   baseURL: process.env.STRAPI_ADMIN_BACKEND_URL,
+  withCredentials: true,
 });
 
 instance.interceptors.request.use(
   async (config) => {
     config.headers = {
-      Authorization: `Bearer ${auth.getToken()}`,
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
+      // Authorization: `Bearer ${auth.getToken()}`,
+      Accept: "application/json",
+      "Content-Type": "application/json",
     };
 
     return config;
   },
   (error) => {
     Promise.reject(error);
-  }
+  },
 );
 
 instance.interceptors.response.use(
@@ -34,7 +35,7 @@ instance.interceptors.response.use(
     }
 
     throw error;
-  }
+  },
 );
 
 export default instance;
